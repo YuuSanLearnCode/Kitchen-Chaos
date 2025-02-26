@@ -51,3 +51,24 @@ crashlytics/
 # Other
 .DS_Store
 Thumbs.db
+# Thư mục và tệp do Unity tạo ra cần bỏ qua
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+[Uu]ser[Ss]ettings/
+
+# Thư mục và tệp của hệ điều hành
+.DS_Store
+Thumbs.db
+
+# Thư mục và tệp của IDE
+.vscode/
+.idea/
+*.csproj
+*.sln
+
