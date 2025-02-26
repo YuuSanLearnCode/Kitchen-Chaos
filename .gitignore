@@ -67,3 +67,5 @@ crashlytics/
 
 # Uncomment dòng dưới nếu bạn muốn bỏ qua Asset Store Tools plugin
 /[Aa]ssets/AssetStoreTools*
+# Tệp Addressable Assets đã đóng gói
+*.bin
