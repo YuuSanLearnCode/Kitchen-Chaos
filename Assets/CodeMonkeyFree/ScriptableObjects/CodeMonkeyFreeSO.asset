@@ -14,40 +14,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.00
   subtype: kitchenchaos
-  lastShownTimestamp: 1740550092
+  lastShownTimestamp: 1740824242
   lastUpdateResponse:
     version: 1.00
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1740550092
+  checkedLastUpdateTimestamp: 1740824242
   lastQOTDResponse:
-    questionId: 154
-    questionText: What is the orthographicSize in a 2D camera?
-    answerA: Units visible horizontally
-    answerB: Units visible vertically
-    answerC: Half the units visible horizontally
-    answerD: Half the units visible vertically
+    questionId: 155
+    questionText: What Types can you natively store with PlayerPrefs?
+    answerA: Anything
+    answerB: string, int, float, bool
+    answerC: string, int, float
+    answerD: 
     answerE: 
-  lastQotdTimestamp: 1740550092
+  lastQotdTimestamp: 1740824242
   lastDynamicHeaderResponse:
-    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/unityBundleFeb25.png
-    topText: Unity 95% OFF on 3 BUNDLES! If just one asset looks interesting then
-      the whole bundle is worth it!
-    topLink: unityassetstore
-    bottomText: My 10+ Years of C# Knowledge in 1 Course!
-    bottomLink: csharpcourse
-  lastDynamicHeaderTimestamp: 1740550092
+    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/syntySaleFeb25_EndsSoon.png
+    topText: Make ANY game with these awesome Assets! (70% OFF ENDS SOON!)
+    topLink: syntystore
+    bottomText: My Toolkit is almost done! Make games BETTER and FASTER!
+    bottomLink: interestedcodemonkeytoolkit
+  lastDynamicHeaderTimestamp: 1740824242
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/tictactoenfefree">I just published my latest
       FREE course! Click here!</a>
-  websiteLatestMessageTimestamp: 1740550092
+  websiteLatestMessageTimestamp: 1740824242
   websiteLatestVideos:
     videos:
+    - youTubeId: 0GpHxF-KXus
+      title: Multiplayer Game Development just got 100X FASTER!
+    - youTubeId: 4jt6YYTlVd0
+      title: Make AWESOME Games 70% OFF!
     - youTubeId: _JjfaAF6Xeg
       title: I got a MYSTERY Package in the mail!
     - youTubeId: _PIRFWc50qs
       title: TOP 10 NEW Systems and Tools FEBRUARY 2025! | Unity Asset Store
-    - youTubeId: CFN5WSGgn-M
-      title: Only 32% of Games made $500!
-    - youTubeId: ncCQWjtaaGc
-      title: TOP 10 FREE NEW Assets FEBRUARY 2025!
-  websiteLatestVideosTimestamp: 1740550092
+  websiteLatestVideosTimestamp: 1740824242
