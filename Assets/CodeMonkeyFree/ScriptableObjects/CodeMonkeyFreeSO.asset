@@ -14,39 +14,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.00
   subtype: kitchenchaos
-  lastShownTimestamp: 1740824242
+  lastShownTimestamp: 1741151950
   lastUpdateResponse:
     version: 1.00
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1740824242
+  checkedLastUpdateTimestamp: 1741151950
   lastQOTDResponse:
-    questionId: 155
-    questionText: What Types can you natively store with PlayerPrefs?
-    answerA: Anything
-    answerB: string, int, float, bool
-    answerC: string, int, float
+    questionId: 157
+    questionText: 'Is there a problem with this code?
+
+      <p>private void SetCameraFollowFunc(Func&lt;Vector3&gt;
+      cameraFollowFunc) { }</p>
+
+      <p>SetCameraFollowFunc(() =&gt; new Vector3(1,
+      0, 0));</p>'
+    answerA: No
+    answerB: 'Should be: SetCameraFollowFunc(() =&#62; return new Vector3(1, 0, 0));'
+    answerC: 'Should be: SetCameraFollowFunc((Vector3(1, 0, 0)) =&#62; { });'
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1740824242
+  lastQotdTimestamp: 1741151950
   lastDynamicHeaderResponse:
-    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/syntySaleFeb25_EndsSoon.png
-    topText: Make ANY game with these awesome Assets! (70% OFF ENDS SOON!)
-    topLink: syntystore
+    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/unityBundleFeb25.png
+    topText: Unity 95% OFF on 3 BUNDLES! If just one asset looks interesting then
+      the whole bundle is worth it!
+    topLink: unityassetstore
     bottomText: My Toolkit is almost done! Make games BETTER and FASTER!
     bottomLink: interestedcodemonkeytoolkit
-  lastDynamicHeaderTimestamp: 1740824242
+  lastDynamicHeaderTimestamp: 1741151950
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/tictactoenfefree">I just published my latest
       FREE course! Click here!</a>
-  websiteLatestMessageTimestamp: 1740824242
+  websiteLatestMessageTimestamp: 1741151950
   websiteLatestVideos:
     videos:
+    - youTubeId: 0fWLGCIcylg
+      title: You NEED to do this Exercise!
+    - youTubeId: lGZ5P7pK9po
+      title: TOP 20 Visual Assets to INSPIRE YOU! (FEBRUARY 2025)
     - youTubeId: 0GpHxF-KXus
       title: Multiplayer Game Development just got 100X FASTER!
     - youTubeId: 4jt6YYTlVd0
       title: Make AWESOME Games 70% OFF!
-    - youTubeId: _JjfaAF6Xeg
-      title: I got a MYSTERY Package in the mail!
-    - youTubeId: _PIRFWc50qs
-      title: TOP 10 NEW Systems and Tools FEBRUARY 2025! | Unity Asset Store
-  websiteLatestVideosTimestamp: 1740824242
+  websiteLatestVideosTimestamp: 1741151950
