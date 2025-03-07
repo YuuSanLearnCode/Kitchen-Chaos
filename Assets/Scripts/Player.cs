@@ -53,7 +53,7 @@ public class Player : MonoBehaviour {
     private void HandleInteraction() {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
-        Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+        Vector3 moveDir = new(inputVector.x, 0f, inputVector.y);
 
         if (moveDir != Vector3.zero) {
             lastInteractDir = moveDir;
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour {
     public void HanderMovement() {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
-        Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
+        Vector3 moveDir = new(inputVector.x, 0f, inputVector.y);
         float playerRadius = .7f;
         float playerHeight = 2f;
         float moveDistance = moveSpeed * Time.deltaTime;

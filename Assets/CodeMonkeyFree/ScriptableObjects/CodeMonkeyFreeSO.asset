@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.00
   subtype: kitchenchaos
-  lastShownTimestamp: 1741151950
+  lastShownTimestamp: 1741245563
   lastUpdateResponse:
     version: 1.00
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1741151950
+  checkedLastUpdateTimestamp: 1741245564
   lastQOTDResponse:
     questionId: 157
     questionText: 'Is there a problem with this code?
@@ -33,7 +33,7 @@ MonoBehaviour:
     answerC: 'Should be: SetCameraFollowFunc((Vector3(1, 0, 0)) =&#62; { });'
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1741151950
+  lastQotdTimestamp: 1741245564
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/unityBundleFeb25.png
     topText: Unity 95% OFF on 3 BUNDLES! If just one asset looks interesting then
@@ -41,11 +41,11 @@ MonoBehaviour:
     topLink: unityassetstore
     bottomText: My Toolkit is almost done! Make games BETTER and FASTER!
     bottomLink: interestedcodemonkeytoolkit
-  lastDynamicHeaderTimestamp: 1741151950
+  lastDynamicHeaderTimestamp: 1741245564
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/tictactoenfefree">I just published my latest
       FREE course! Click here!</a>
-  websiteLatestMessageTimestamp: 1741151950
+  websiteLatestMessageTimestamp: 1741245564
   websiteLatestVideos:
     videos:
     - youTubeId: 0fWLGCIcylg
@@ -56,4 +56,4 @@ MonoBehaviour:
       title: Multiplayer Game Development just got 100X FASTER!
     - youTubeId: 4jt6YYTlVd0
       title: Make AWESOME Games 70% OFF!
-  websiteLatestVideosTimestamp: 1741151950
+  websiteLatestVideosTimestamp: 1741245564
