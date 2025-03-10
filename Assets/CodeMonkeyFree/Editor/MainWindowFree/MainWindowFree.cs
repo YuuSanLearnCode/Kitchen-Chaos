@@ -1,9 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UIElements;
@@ -12,14 +9,11 @@ namespace CodeMonkey.FreeWindow {
 
     [InitializeOnLoad]
     public class MainWindowFree : EditorWindow {
-
-
         [SerializeField] private CodeMonkeyFreeSO codeMonkeyFreeSO;
         [SerializeField] private VisualTreeAsset visualTreeAsset;
         [SerializeField] private VisualTreeAsset textTemplateVisualTreeAsset;
         [SerializeField] private VisualTreeAsset codeTemplateVisualTreeAsset;
         [SerializeField] private VisualTreeAsset videoTemplateVisualTreeAsset;
-
 
         static MainWindowFree() {
             EditorApplication.update += Startup;
@@ -36,7 +30,7 @@ namespace CodeMonkey.FreeWindow {
                     // Too soon
                     return;
                 }
-                
+
                 codeMonkeyInteractiveSO.lastShownTimestamp = unixTimestamp;
 
                 ShowWindow();
@@ -45,16 +39,12 @@ namespace CodeMonkey.FreeWindow {
             }
         }
 
-
-
         private enum SubWindow {
             MainMenu,
         }
 
-
         private VisualElement lectureListVisualElement;
         private VisualElement mainMenuVisualElement;
-
 
         [MenuItem("Code Monkey/Code Monkey Free Assets", priority = 0)]
         public static void ShowWindow() {
@@ -117,6 +107,7 @@ namespace CodeMonkey.FreeWindow {
                         string thumbnailUrl = $"https://img.youtube.com/vi/{youTubeId}/mqdefault.jpg";
                         AddVideoReference(videoTemplateVisualTreeAsset, containerVisualElement, thumbnailUrl, youTubeTitle, "https://www.youtube.com/watch?v=" + youTubeId);
                         break;
+
                     case "code":
                         AddCode(codeTemplateVisualTreeAsset, containerVisualElement, refData.Substring(refType.Length + 1).Trim());
                         break;
@@ -289,7 +280,6 @@ namespace CodeMonkey.FreeWindow {
                 messageVisualElement.Q<Label>("messageLabel").text = websiteLatestMessage.text;
             });
 
-
             // QOTD
             VisualElement qotdVisualElement =
                 mainMenuVisualElement.Q<VisualElement>("qotd");
@@ -338,7 +328,6 @@ namespace CodeMonkey.FreeWindow {
                 }
             });
 
-
             // Dynamic Message
             VisualElement dynamicMessageVisualElement =
                 mainMenuVisualElement.Q<VisualElement>("dynamicMessage");
@@ -348,7 +337,6 @@ namespace CodeMonkey.FreeWindow {
                 Application.OpenURL(getDynamicMessageURL());
             });
 
-
             // Latest Videos
             VisualElement latestVideosVisualElement =
                 mainMenuVisualElement.Q<VisualElement>("latestVideos");
@@ -357,8 +345,6 @@ namespace CodeMonkey.FreeWindow {
             latestVideosVisualElement.Q<VisualElement>("_2Container").Clear();
             latestVideosVisualElement.Q<VisualElement>("_3Container").Clear();
             latestVideosVisualElement.Q<VisualElement>("_4Container").Clear();
-
-
 
             CodeMonkeyFreeSO.GetWebsiteLatestVideos((CodeMonkeyFreeSO.LatestVideos latestVideos) => {
                 AddLatestVideoReference(latestVideos.videos[0], latestVideosVisualElement.Q<VisualElement>("_1Container"));
@@ -382,7 +368,6 @@ namespace CodeMonkey.FreeWindow {
                     }
                 );
             }
-
 
             // DynamicHeader
             VisualElement dynamicHeaderVisualElement =
@@ -410,12 +395,5 @@ namespace CodeMonkey.FreeWindow {
                     "<a href='https://cmonkey.co/" + lastDynamicHeaderResponse.bottomLink + "'><u>" + lastDynamicHeaderResponse.bottomText + "</u></a>";
             });
         }
-
-
     }
-
-
-
-
-
 }

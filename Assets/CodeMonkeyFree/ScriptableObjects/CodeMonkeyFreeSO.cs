@@ -8,13 +8,9 @@ namespace CodeMonkey.FreeWindow {
 
     [CreateAssetMenu()]
     public class CodeMonkeyFreeSO : ScriptableObject {
-
-
         private const long SECONDS_BETWEEN_CONTACTING_WEBSITE = 3600;
 
-
         private static CodeMonkeyFreeSO codeMonkeyFreeSO;
-
 
         public static CodeMonkeyFreeSO GetCodeMonkeyFreeSO() {
             if (codeMonkeyFreeSO != null) {
@@ -32,8 +28,6 @@ namespace CodeMonkey.FreeWindow {
             return null;
         }
 
-
-
         public string currentVersion;
         public string subtype;
         public long lastShownTimestamp;
@@ -48,9 +42,6 @@ namespace CodeMonkey.FreeWindow {
         [SerializeField] private long websiteLatestMessageTimestamp;
         [SerializeField] private LatestVideos websiteLatestVideos;
         [SerializeField] private long websiteLatestVideosTimestamp;
-
-
-
 
         [Serializable]
         private struct GenericActionJSONData {
@@ -254,7 +245,7 @@ namespace CodeMonkey.FreeWindow {
                         WebsiteResponse websiteResponse = JsonUtility.FromJson<WebsiteResponse>(downloadText);
                         if (websiteResponse.returnCode == 1) {
                             // Success
-                            LastDynamicHeaderResponse lastDynamicHeaderResponse = 
+                            LastDynamicHeaderResponse lastDynamicHeaderResponse =
                                 JsonUtility.FromJson<LastDynamicHeaderResponse>(websiteResponse.returnText);
                             codeMonkeyInteractiveSO.lastDynamicHeaderResponse = lastDynamicHeaderResponse;
                             onResponse(codeMonkeyInteractiveSO.lastDynamicHeaderResponse);
@@ -269,8 +260,6 @@ namespace CodeMonkey.FreeWindow {
                 unityWebRequest.Dispose();
             };
         }
-
-
 
         [Serializable]
         public struct WebsiteLatestMessage {
@@ -333,10 +322,6 @@ namespace CodeMonkey.FreeWindow {
                 unityWebRequest.Dispose();
             };
         }
-
-
-
-
 
         [Serializable]
         public class LatestVideos {
@@ -404,8 +389,5 @@ namespace CodeMonkey.FreeWindow {
                 unityWebRequest.Dispose();
             };
         }
-
-
     }
-
 }
