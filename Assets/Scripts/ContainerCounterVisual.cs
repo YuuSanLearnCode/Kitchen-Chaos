@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class ContainerCounterVisual : MonoBehaviour
-{
+public class ContainerCounterVisual : MonoBehaviour {
     private Animator animator;
 
     private const string OPEN_CLOSE = "OpenClose";
@@ -12,6 +9,7 @@ public class ContainerCounterVisual : MonoBehaviour
     private void Awake() {
         animator = GetComponent<Animator>();
     }
+
     private void Start() {
         containerCounter.OnPlayerGrabbedObject += ContainerCounter_OnPlayerGrabbedObject; ;
     }
