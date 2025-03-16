@@ -10,9 +10,7 @@ public class KitchenObject : MonoBehaviour {
     }
 
     public void SetKitchenObjectParent(IKitchenObjectParent kitchenObjectParent) {
-        if (this.kitchenObjectParent != null) {
-            this.kitchenObjectParent.ClearKitchenObject(); //xoa  kitchen object cu tren kitchenObjectParent
-        }
+        this.kitchenObjectParent?.ClearKitchenObject(); //xoa kitchen object cu tren kitchenObjectParent
 
         this.kitchenObjectParent = kitchenObjectParent;
 
@@ -34,6 +32,16 @@ public class KitchenObject : MonoBehaviour {
         kitchenObjectParent.ClearKitchenObject();
 
         Destroy(gameObject);
+    }
+
+    public bool TryGetPlate(out PlateKitchenObject plateKitchenObject) {
+        if (this is PlateKitchenObject) {
+            plateKitchenObject = this as PlateKitchenObject;
+            return true;
+        } else {
+            plateKitchenObject = null;
+            return false;
+        }
     }
 
     public static KitchenObject SpawnKitchenObject(KitchenObjectSO kitchenObjectSO, IKitchenObjectParent KitchenObjectParent) {

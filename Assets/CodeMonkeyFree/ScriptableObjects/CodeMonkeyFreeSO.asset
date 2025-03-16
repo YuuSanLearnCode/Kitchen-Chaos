@@ -14,23 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.00
   subtype: kitchenchaos
-  lastShownTimestamp: 1741772283
+  lastShownTimestamp: 1742117716
   lastUpdateResponse:
     version: 1.00
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1741772283
+  checkedLastUpdateTimestamp: 1742117716
   lastQOTDResponse:
-    questionId: 159
-    questionText: What is the difference between Action&lt;float&gt; and Func&lt;float&gt;
-      ?
-    answerA: Both are the same
-    answerB: Action&#60;float&#62; takes float parameter and Func&#60;float&#62;
-      returns float
-    answerC: Func&#60;float&#62; takes float parameter and Action&#60;float&#62;
-      returns float
+    questionId: 160
+    questionText: What is the difference between Application.dataPath and Application.persistentDataPath
+      on Windows?
+    answerA: No difference on Windows
+    answerB: Application.dataPath is the install folder and Application.persistentDataPath
+      is on the Registry
+    answerC: Application.dataPath is the install folder and Application.persistentDataPath
+      is on the User Data
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1741772283
+  lastQotdTimestamp: 1742117716
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/codeMonkeyToolkitLaunch.png
     topText: Get my Toolkit! 40 Tools and Elements to help you make games BETTER
@@ -38,19 +38,19 @@ MonoBehaviour:
     topLink: toolkit
     bottomText: Awesome Low Poly assets bundle 96% OFF!
     bottomLink: humblebundle
-  lastDynamicHeaderTimestamp: 1741772283
+  lastDynamicHeaderTimestamp: 1742117716
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/tictactoenfefree">I just published my latest
       FREE course! Click here!</a>
-  websiteLatestMessageTimestamp: 1741772283
+  websiteLatestMessageTimestamp: 1742117716
   websiteLatestVideos:
     videos:
+    - youTubeId: dCET8Jx-5Ts
+      title: Vibe Coding is the Future (?)
     - youTubeId: 0AF_y_YiUbM
       title: I've wanted to do this for YEARS!
     - youTubeId: 4WrOcNvOZwU
       title: AWESOME Bundle 97% OFF! (Includes never-bundled assets!)
     - youTubeId: 0fWLGCIcylg
       title: You NEED to do this Exercise!
-    - youTubeId: lGZ5P7pK9po
-      title: TOP 20 Visual Assets to INSPIRE YOU! (FEBRUARY 2025)
-  websiteLatestVideosTimestamp: 1741772283
+  websiteLatestVideosTimestamp: 1742117716
