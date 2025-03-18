@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using System;
+using UnityEngine;
 
-public class PlatesCounter : BaseCounter
-{
+public class PlatesCounter : BaseCounter {
 
     public event EventHandler OnPlateSpawned;
+
     public event EventHandler OnPlateRemoved;
 
     [SerializeField] private KitchenObjectSO plateKitchenObjectSO;
@@ -17,9 +15,9 @@ public class PlatesCounter : BaseCounter
 
     private void Update() {
         spawnPlateTime += Time.deltaTime;
-        if(spawnPlateTime > spawnPlateTimerMax) {
+        if (spawnPlateTime > spawnPlateTimerMax) {
             spawnPlateTime = 0f;
-            if(platesSpawnAmount < platesSpawnAmountMax) {
+            if (platesSpawnAmount < platesSpawnAmountMax) {
                 platesSpawnAmount++;
 
                 OnPlateSpawned?.Invoke(this, EventArgs.Empty);
@@ -30,16 +28,14 @@ public class PlatesCounter : BaseCounter
     public override void Interact(Player player) {
         if (!player.HasKitchenObject()) {
             //player is empty handed
-            if(platesSpawnAmount > 0) {
+            if (platesSpawnAmount > 0) {
                 //there at least one plate to pick up
                 platesSpawnAmount--;
 
                 KitchenObject.SpawnKitchenObject(plateKitchenObjectSO, player);
-            
-                OnPlateRemoved?.Invoke(this, EventArgs.Empty);
 
+                OnPlateRemoved?.Invoke(this, EventArgs.Empty);
             }
         }
     }
-
 }

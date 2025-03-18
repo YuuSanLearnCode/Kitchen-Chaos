@@ -6,9 +6,10 @@ public class ProgressBarUI : MonoBehaviour {
     [SerializeField] private Image barImage;
 
     private IHasProgress hasProgress;
+
     private void Start() {
         hasProgress = hasProgressGameObject.GetComponent<IHasProgress>();
-        if(hasProgress == null) {
+        if (hasProgress == null) {
             Debug.LogError("Game object" + hasProgressGameObject + "does not have progress bar");
         }
         hasProgress.OnProgressChanged += HasProgress_OnProgressChanged;
