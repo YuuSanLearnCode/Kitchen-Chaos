@@ -10,7 +10,6 @@ public class SoundManager : MonoBehaviour {
         Instance = this;
         volume = PlayerPrefs.GetFloat(PLAYER_PREFS_SOUND_EFFECTS_VOLUME, 1f);
     }
-    
 
     private void Start() {
         DeliveryManager.Instance.OnRecipeSuccess += DeliveryManager_OnRecipeSuccess;
@@ -64,7 +63,7 @@ public class SoundManager : MonoBehaviour {
 
     public void ChangeVolume() {
         volume += 0.1f;
-        if(volume > 1f) {
+        if (volume > 1f) {
             volume = 0f;
         }
 
@@ -75,6 +74,4 @@ public class SoundManager : MonoBehaviour {
     public float GetVolume() {
         return volume;
     }
-
-    
 }

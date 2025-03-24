@@ -1,9 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicManager : MonoBehaviour
-{
+public class MusicManager : MonoBehaviour {
     private const string PLAYER_PREFS_MUSIC_VOLUME = "MusicVolume";
     public static MusicManager Instance { get; private set; }
 
@@ -32,5 +29,4 @@ public class MusicManager : MonoBehaviour
     public float GetVolume() {
         return volume;
     }
-
 }
