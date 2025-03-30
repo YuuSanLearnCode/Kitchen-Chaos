@@ -8,16 +8,16 @@ public class PlatesCounter : BaseCounter {
     public event EventHandler OnPlateRemoved;
 
     [SerializeField] private KitchenObjectSO plateKitchenObjectSO;
-    private float spawnPlateTime;
+    private float spawnPlateTimer;
     private float spawnPlateTimerMax = 4f;
     private int platesSpawnAmount;
     private int platesSpawnAmountMax = 4;
 
     private void Update() {
-        spawnPlateTime += Time.deltaTime;
-        if (spawnPlateTime > spawnPlateTimerMax) {
-            spawnPlateTime = 0f;
-            if (platesSpawnAmount < platesSpawnAmountMax) {
+        spawnPlateTimer += Time.deltaTime;
+        if (spawnPlateTimer > spawnPlateTimerMax) {
+            spawnPlateTimer = 0f;
+            if (GameManager.Instance.IsGamePlaying() && platesSpawnAmount < platesSpawnAmountMax) {
                 platesSpawnAmount++;
 
                 OnPlateSpawned?.Invoke(this, EventArgs.Empty);

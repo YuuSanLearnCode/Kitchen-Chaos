@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class GameInput : MonoBehaviour {
-
     private const string PLAYER_PREFS_BINDING = "InputBinding";
     public static GameInput Instance { get; private set; }
 
@@ -13,14 +12,19 @@ public class GameInput : MonoBehaviour {
 
     public event EventHandler OnPauseAction;
 
+    public event EventHandler OnBindingRebind;
+
     public enum Binding {
         Move_Up,
         Move_Down,
         Move_Left,
         Move_Right,
         Interact,
-        Interact_Alternative,
-        Pause
+        InteractAlternate,
+        Pause,
+        //GanePad_Interact,
+        //GamePad_Interact_Alternative,
+        //GamePad_Pause,
     }
 
     private PlayerInputActions playerInputActions;
@@ -84,12 +88,22 @@ public class GameInput : MonoBehaviour {
             case Binding.Interact:
                 return playerInputActions.Player.Interact.bindings[0].ToDisplayString();
 
-            case Binding.Interact_Alternative:
+            case Binding.InteractAlternate:
                 return playerInputActions.Player.InteractAlternative.bindings[0].ToDisplayString();
 
             case Binding.Pause:
                 return playerInputActions.Player.Pause.bindings[0].ToDisplayString();
-                ;
+
+            //case Binding.GanePad_Interact:
+            //    return playerInputActions.Player.Interact.bindings[1].ToDisplayString();
+
+            //case Binding.GamePad_Interact_Alternative:
+            //    return playerInputActions.Player.InteractAlternative.bindings[1].ToDisplayString();
+
+            //case Binding.GamePad_Pause:
+            //    return playerInputActions.Player.Pause.bindings[1].ToDisplayString()
+            //    ;
+
             default:
                 return "Unbound";
         }
@@ -105,32 +119,51 @@ public class GameInput : MonoBehaviour {
                 inputAction = playerInputActions.Player.Move;
                 bindingIndex = 1;
                 break;
-                case Binding.Move_Down:
+
+            case Binding.Move_Down:
                 inputAction = playerInputActions.Player.Move;
                 bindingIndex = 2;
                 break;
+
             case Binding.Move_Left:
                 inputAction = playerInputActions.Player.Move;
                 bindingIndex = 3;
                 break;
+
             case Binding.Move_Right:
                 inputAction = playerInputActions.Player.Move;
                 bindingIndex = 4;
                 break;
+
             case Binding.Interact:
                 inputAction = playerInputActions.Player.Interact;
                 bindingIndex = 0;
                 break;
-            case Binding.Interact_Alternative:
+
+            case Binding.InteractAlternate:
                 inputAction = playerInputActions.Player.InteractAlternative;
                 bindingIndex = 0;
                 break;
+
             case Binding.Pause:
                 inputAction = playerInputActions.Player.Pause;
                 bindingIndex = 0;
                 break;
 
+                //case Binding.GanePad_Interact:
+                //    inputAction = playerInputActions.Player.Interact;
+                //    bindingIndex = 1;
+                //    break;
 
+                //case Binding.GamePad_Interact_Alternative:
+                //    inputAction = playerInputActions.Player.InteractAlternative;
+                //    bindingIndex = 1;
+                //    break;
+
+                //case Binding.GamePad_Pause:
+                //    inputAction = playerInputActions.Player.Pause;
+                //    bindingIndex = 1;
+                //    break;
         }
         inputAction.PerformInteractiveRebinding(bindingIndex)
             .OnComplete(callback => {
@@ -141,6 +174,8 @@ public class GameInput : MonoBehaviour {
                 // save the new binding
                 PlayerPrefs.SetString(PLAYER_PREFS_BINDING, playerInputActions.SaveBindingOverridesAsJson());
                 PlayerPrefs.Save();
+
+                OnBindingRebind?.Invoke(this, EventArgs.Empty);
             })
         .Start();
     }

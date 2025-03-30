@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,6 +27,8 @@ public class OptionsUI : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI pauseText;
     [SerializeField] private Transform pressToRebindKeyTransform;
 
+    private Action onCloseButtonAction;
+
     private void Awake() {
         Instance = this;
         soundEffectsButton.onClick.AddListener(() => {
@@ -39,6 +42,7 @@ public class OptionsUI : MonoBehaviour {
         });
         closeButton.onClick.AddListener(() => {
             Hide();
+            onCloseButtonAction();
         });
 
         moveUpButton.onClick.AddListener(() => {
@@ -57,7 +61,7 @@ public class OptionsUI : MonoBehaviour {
             RebindBinding(GameInput.Binding.Interact);
         });
         interactAlternateButton.onClick.AddListener(() => {
-            RebindBinding(GameInput.Binding.Interact_Alternative);
+            RebindBinding(GameInput.Binding.InteractAlternate);
         });
         pauseButton.onClick.AddListener(() => {
             RebindBinding(GameInput.Binding.Pause);
@@ -85,12 +89,16 @@ public class OptionsUI : MonoBehaviour {
         moveLeftText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Left);
         moveRightText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Move_Right);
         interactText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Interact);
-        interactAlternateText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Interact_Alternative);
+        interactAlternateText.text = GameInput.Instance.GetBindingText(GameInput.Binding.InteractAlternate);
         pauseText.text = GameInput.Instance.GetBindingText(GameInput.Binding.Pause);
     }
 
-    public void Show() {
+    public void Show(Action onCloseButtonAction) {
+        this.onCloseButtonAction = onCloseButtonAction;
+
         gameObject.SetActive(true);
+
+        soundEffectsButton.Select();
     }
 
     public void Hide() {

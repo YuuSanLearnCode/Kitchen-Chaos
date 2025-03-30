@@ -14,39 +14,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.00
   subtype: kitchenchaos
-  lastShownTimestamp: 1742786165
+  lastShownTimestamp: 1743241876
   lastUpdateResponse:
-    version: 1.00
+    version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1742786165
+  checkedLastUpdateTimestamp: 1743241876
   lastQOTDResponse:
-    questionId: 163
-    questionText: What is the purpose of Unity Hub?
-    answerA: Provide a space for the community to interact
-    answerB: Manage different Unity versions and Projects
-    answerC: Dashboard for Unity services
+    questionId: 165
+    questionText: 'Does this variable get reset when you load a different Scene?
+
+      <p>private
+      static int score;</p>'
+    answerA: Yes
+    answerB: No
+    answerC: Only when loading the Main Menu
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1742786165
+  lastQotdTimestamp: 1743241876
   lastDynamicHeaderResponse:
-    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/humbleBundleSyntyMar25.png
-    topText: Make ANY game with these awesome Assets! (96% OFF ENDS SOON!)
+    topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/humbleBundleSyntyMar25Extended.png
+    topText: Make ANY game with these awesome Assets! (97% OFF!)
     topLink: humblebundle
     bottomText: Learn Unity DOTS for MASSIVE Performance Boosts! (and make an RTS)
     bottomLink: dotscourse
-  lastDynamicHeaderTimestamp: 1742786165
+  lastDynamicHeaderTimestamp: 1743241876
   websiteLatestMessage:
-    text: <a href="https://cmonkey.co/tictactoenfefree">I just published my latest
-      FREE course! Click here!</a>
-  websiteLatestMessageTimestamp: 1742786165
+    text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
+      Click here!</a>
+  websiteLatestMessageTimestamp: 1743241876
   websiteLatestVideos:
     videos:
+    - youTubeId: SJClo9ny1kM
+      title: TOP 20 Visual Assets to INSPIRE YOU! (MARCH 2025)
+    - youTubeId: 2-B1HH0rWRI
+      title: EVERYTHING Steam did in 2024! (Devs NEED to Know)
+    - youTubeId: QYrKiHq7Vaw
+      title: TOP 10 NEW Systems and Tools MARCH 2025! | Unity Asset Store
     - youTubeId: ZIg7VoD9ptI
       title: The FUTURE of Unity in 2025 and BEYOND!
-    - youTubeId: W_XOZAWJF24
-      title: I made the MOST PROFITABLE Game as a Test!
-    - youTubeId: J0KMvH-yFmA
-      title: TOP 10 NEW Games, Made with Unity! (FEBRUARY 2025)
-    - youTubeId: DOSLOa7cnoE
-      title: I SHOULD have done this a long time ago, and YOU too!
-  websiteLatestVideosTimestamp: 1742786165
+  websiteLatestVideosTimestamp: 1743241876
